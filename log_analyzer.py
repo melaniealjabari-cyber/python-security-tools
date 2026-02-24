@@ -13,6 +13,8 @@ def analyze_log(file_path):
     return failed_attempts
 
 
+THRESHOLD = 3
+
 if __name__ == "__main__":
     log_file = "sample_log.txt"
     results = analyze_log(log_file)
@@ -20,4 +22,7 @@ if __name__ == "__main__":
     print("Failed Login Attempts by IP:\n")
 
     for ip, count in results.items():
-        print(f"{ip} : {count} failed attempts")
+        if count >= THRESHOLD:
+            print(f"[ALERT] {ip} exceeded threshold with {count} failed attempts")
+        else:
+            print(f"{ip} : {count} failed attempts")
