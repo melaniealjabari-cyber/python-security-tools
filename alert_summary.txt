@@ -1,5 +1,7 @@
 SOC Alert Summary
 =================
+Source log: sample_log.txt
+Threshold: 3
 
-[HIGH] Possible compromise: 10.0.0.5 had 3 failed attempts THEN a SUCCESS login
-[LOW] 172.16.0.2 : 1 failed attempts
+[HIGH] Possible compromise: user=admin ip=10.0.0.5 failures=3 then SUCCESS
+[LOW] Noise: ip=172.16.0.2 failures=1

@@ -1,7 +1,9 @@
 ## MITRE ATT&CK Mapping
 
 
-Technique: T1110 – Brute Force  
+## Impact Assessment
+If privileged credentials are compromised, an attacker may attempt credential harvesting (e.g., LSASS access) and steal Kerberos tickets.  
+If the KRBTGT key is exposed, forged Kerberos tickets (Golden Ticket) could enable persistent domain-wide access until KRBTGT is rotated and trust is re-established.Technique: T1110 – Brute Force  
 Repeated failed login attempts align with brute force password guessing behavior.# Incident Report: Suspicious Login Activity
 
 ## Summary
@@ -29,3 +31,8 @@ Custom Python log analyzer script (`log_analyzer.py`)
 ## Escalation: Possible Compromise Detected
 The analyzer detected a **SUCCESS login after repeated FAILED attempts** from the same IP (10.0.0.5).  
 This pattern can indicate **credential compromise** (failed guessing followed by successful access).
+
+## Impact Assessment
+If privileged credentials are compromised, an attacker may attempt credential harvesting (e.g., LSASS access) and steal Kerberos tickets.  
+If the KRBTGT key is exposed, forged Kerberos tickets (Golden Ticket) could enable persistent domain-wide access until KRBTGT is rotated and trust is re-established.
+
