@@ -1,4 +1,4 @@
-# python-security-tools
+# Blue team python security tools
 
 A collection of small defensive security scripts built to strengthen hands-on blue team skills.
 
