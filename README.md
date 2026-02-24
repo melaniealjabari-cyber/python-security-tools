@@ -23,3 +23,4 @@ Analyzes `sample_log.txt` and flags IP addresses that exceed the failed login th
 ### Password checker
 ```bash
 python3 password_strength_checker.py
+- Detects brute force attempts and flags **possible compromise** when a SUCCESS login follows repeated FAILURES.
