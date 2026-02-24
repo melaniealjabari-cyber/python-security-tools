@@ -1,4 +1,8 @@
-# Incident Report: Suspicious Login Activity
+## MITRE ATT&CK Mapping
+
+
+Technique: T1110 – Brute Force  
+Repeated failed login attempts align with brute force password guessing behavior.# Incident Report: Suspicious Login Activity
 
 ## Summary
 Multiple failed login attempts were detected from IP address 10.0.0.5.
