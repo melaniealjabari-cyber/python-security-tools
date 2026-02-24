@@ -4,3 +4,4 @@ FAILED LOGIN attempt from 10.0.0.5
 FAILED LOGIN attempt from 172.16.0.2
 INFO User logged out 192.168.1.10
 FAILED LOGIN attempt from 10.0.0.5
+SUCCESS LOGIN from 10.0.0.5

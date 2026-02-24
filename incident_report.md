@@ -25,3 +25,7 @@ Repeated failed login attempts may indicate:
 
 ## Tool Used
 Custom Python log analyzer script (`log_analyzer.py`)
+
+## Escalation: Possible Compromise Detected
+The analyzer detected a **SUCCESS login after repeated FAILED attempts** from the same IP (10.0.0.5).  
+This pattern can indicate **credential compromise** (failed guessing followed by successful access).
