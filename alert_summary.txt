@@ -1,0 +1,5 @@
+SOC Alert Summary
+=================
+
+[HIGH] Possible compromise: 10.0.0.5 had 3 failed attempts THEN a SUCCESS login
+[LOW] 172.16.0.2 : 1 failed attempts

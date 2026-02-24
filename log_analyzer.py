@@ -1,4 +1,3 @@
-
 from collections import defaultdict
 import sys
 
@@ -33,13 +32,23 @@ if __name__ == "__main__":
 
     print("Login Analysis:\n")
 
+    alert_lines = []
+
     for ip, count in failed_counts.items():
-        # HIGH: success after failures (possible compromise)
         if ip in success_after and count >= threshold:
-            print(f"[HIGH] Possible compromise: {ip} had {count} failed attempts THEN a SUCCESS login")
-        # MED: lots of failures, no success
+            message = f"[HIGH] Possible compromise: {ip} had {count} failed attempts THEN a SUCCESS login"
         elif count >= threshold:
-            print(f"[MED] Brute force suspected: {ip} has {count} failed attempts")
-        # LOW: small noise
+            message = f"[MED] Brute force suspected: {ip} has {count} failed attempts"
         else:
-            print(f"[LOW] {ip} : {count} failed attempts")
+            message = f"[LOW] {ip} : {count} failed attempts"
+
+        print(message)
+        alert_lines.append(message)
+
+    with open("alert_summary.txt", "w") as alert_file:
+        alert_file.write("SOC Alert Summary\n")
+        alert_file.write("=================\n\n")
+        for line in alert_lines:
+            alert_file.write(line + "\n")
+
+    print("\nAlert summary written to alert_summary.txt")
