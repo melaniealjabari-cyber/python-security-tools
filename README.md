@@ -18,3 +18,8 @@ Run the script and enter a password when prompted to evaluate its strength.
 
 ### log_analyzer.py
 Analyzes `sample_log.txt` and flags IP addresses that exceed the failed login threshold.
+## Usage
+
+### Password checker
+```bash
+python3 password_strength_checker.py
