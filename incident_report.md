@@ -1,0 +1,23 @@
+# Incident Report: Suspicious Login Activity
+
+## Summary
+Multiple failed login attempts were detected from IP address 10.0.0.5.
+
+## Findings
+- IP 10.0.0.5 generated 3 failed login attempts.
+- Threshold for alerting is set at 3 attempts.
+- Alert condition was triggered.
+
+## Potential Risk
+Repeated failed login attempts may indicate:
+- Brute force attack
+- Credential stuffing attempt
+- Automated login scanning
+
+## Recommended Action
+- Investigate source IP
+- Check for additional activity from same subnet
+- Consider temporary block if pattern continues
+
+## Tool Used
+Custom Python log analyzer script (`log_analyzer.py`)
