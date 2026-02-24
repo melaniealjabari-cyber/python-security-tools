@@ -11,4 +11,10 @@ A collection of small defensive security scripts built to strengthen hands-on bl
 ## Purpose
 These tools are built as part of my cybersecurity training to simulate real-world SOC tasks.
 
-More tools coming soon.
+## How to Run
+
+### password_strength_checker.py
+Run the script and enter a password when prompted to evaluate its strength.
+
+### log_analyzer.py
+Analyzes `sample_log.txt` and flags IP addresses that exceed the failed login threshold.
